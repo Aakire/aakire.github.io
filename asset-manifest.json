@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/static/css/main.de48ba68.css",
+    "main.js": "/static/js/main.c6a21f21.js",
+    "static/js/787.33017cb8.chunk.js": "/static/js/787.33017cb8.chunk.js",
+    "static/media/robobanner.png": "/static/media/robobanner.af19118c504d139aac5b.png",
+    "index.html": "/index.html",
+    "main.de48ba68.css.map": "/static/css/main.de48ba68.css.map",
+    "main.c6a21f21.js.map": "/static/js/main.c6a21f21.js.map",
+    "787.33017cb8.chunk.js.map": "/static/js/787.33017cb8.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.de48ba68.css",
+    "static/js/main.c6a21f21.js"
+  ]
+}

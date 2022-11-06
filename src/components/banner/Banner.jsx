@@ -1,10 +1,12 @@
+import style from './banner.module.css'
+
 const Banner = () => {
     return(
-        <div className='banner-section'>
-            <div className='banner'>
-            <p className='text-banner'>Робототехнические конструкторы <br />
+        <div className={style.bannerSection}>
+            <div className={style.banner}>
+            <p className={style.textBanner}>Робототехнические конструкторы <br />
             <span>для образования детей</span><br />
-            <button className='banner-btn'>Показать товары</button>
+            <button className={style.bannerBtn}>Показать товары</button>
             </p>
             </div>
         </div>

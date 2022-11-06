@@ -1,0 +1,35 @@
+header{
+    display: grid;
+    grid-template-columns: 1fr 1fr ;
+    background-color: var(--backcolor_2);
+    padding: 20px 50px;
+  }
+  
+  nav{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-items: end;
+    align-items: center;
+    
+  }
+  
+  .logo{
+    color: var(--color_1);
+  }
+  
+  .navItem{
+    color: var(--color_1);
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    text-decoration: none;
+    padding: 10px;
+  }
+  
+  .navItem:hover{
+   
+    border: 1px solid var(--color_1);
+    border-radius: 10px;
+    box-shadow: 2px 2px var(--color_1);
+    background-color: var(--color_4);
+  }

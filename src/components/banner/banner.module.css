@@ -1,0 +1,51 @@
+.bannerSection{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    margin: 50px;
+  }
+  
+  .banner{
+    display: grid;
+    grid-template-columns: 0.5fr 1fr;
+    justify-items: end;
+    align-items: center;
+    background-image: url("/public/img/robobanner.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position-x: right;
+    background-position: start;
+    padding: 40px 0px;
+    border-radius: 30px;
+  }
+  
+  .textBanner{
+    color: var(--fontcolor);
+    font-size: 40px;
+    font-weight: bold;
+  }
+  
+  .textBanner span{
+    color: var(--backcolor_2);
+  }
+  
+  .bannerBtn{
+    background-color: var(--backcolor_2);
+    color: var(--color_1);
+    margin-top: 20px;
+    padding: 20px 25px;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 15px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .bannerBtn:hover{
+    box-shadow: 5px 5px 5px var(--fontcolor);
+    background-color: var(--color_4);
+  }
+  
+  .bannerBtn:active{
+    background-color: var(--color_1);
+  }

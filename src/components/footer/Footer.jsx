@@ -1,7 +1,9 @@
+import style from './footer.module.css'
+
 const Footer = () => {
     return(
         <footer>
-            <div className='logo'>ROBO</div>
+            <div className={style.logo}>ROBO</div>
             <div>
             <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec non bibendum erat, a hendrerit lacus. Sed sit amet tellus ex. In dictum, nibh et finibus condimentum, sapien dolor consequat felis, et faucibus enim augue faucibus nibh.</p>

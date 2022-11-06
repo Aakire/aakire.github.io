@@ -1,10 +1,19 @@
 import Card from './card/Card'
+import style from './products.module.css'
 
 const Products = () =>{
   return(
-    <div className='products-section'>
-        <h2>Все смартфоны</h2>
-        <div className='products'>
+    <div className={style.productsSection}>       
+
+        <div className={style.search}>
+          <h2>Все смартфоны</h2>
+          <div className={style.searchBlock}>
+            <img src='/img/search.png' alt='search' />
+            <input placeholder='Поиск по товарам' />
+          </div>
+        </div>
+
+        <div className={style.products}>
           <Card tittle='Лего-45678' description='Базовый набор LEGO Education SPIKE Prime Лего-45678.' price='80 000 ₽' img='/img/45678.jpg' />
           <Card tittle='Лего-45544' description='Базовый набор Mindstorms Education EV3 LEGO 45544.' price='48 400 ₽' img='/img/45544.jpg' />
           <Card tittle='Лего-9641' description='Набор LEGO 9641 Пневматика.' price='19 990 ₽' img='/img/9641.jpg' />

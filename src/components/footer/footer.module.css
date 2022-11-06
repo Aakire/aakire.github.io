@@ -1,0 +1,21 @@
+footer{
+    display: grid;
+    grid-template-columns: 0.8fr 2fr;
+    background-color: var(--backcolor_2);
+    padding: 30px;
+    justify-items: center;
+    align-items: center;
+    gap: 30px;
+    margin-top: 50px;
+  }
+  
+  footer p{
+    color: var(--color_1);
+    font-size: 14px;
+  }
+  
+  .logo{
+    color: var(--color_1);
+    font-size: 45px;
+    font-weight: bold;
+  }

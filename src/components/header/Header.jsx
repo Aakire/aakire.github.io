@@ -1,11 +1,13 @@
+import style from './header.module.css';
+
 const Header = () =>{
     return(
         <header>
-            <h1 className='logo'>ROBO</h1>
+            <h1 className={style.logo}>ROBO</h1>
             <nav>
-                <a className='nav-item' href=''>Наши контакты</a>
-                <a className='nav-item' href=''>Избранное</a>
-                <a className='nav-item' href=''>Корзина</a>
+                <a className={style.navItem} href=''>Наши контакты</a>
+                <a className={style.navItem} href=''>Избранное</a>
+                <a className={style.navItem} href=''>Корзина</a>
             </nav>
         </header>
     )

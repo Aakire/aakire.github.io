@@ -1,6 +1,40 @@
 import CartItem from "./cartItem/CartItem";
 import style from './cart.module.css'
 
+
+const cart = [
+  {
+    id: 1,
+    tittle: 'Лего-45678',
+    price: '80 000 ₽',
+    img: '/img/45678.jpg'
+  },
+  {
+    id: 2,
+    tittle: 'Лего-45544',
+    price: '48 400 ₽',
+    img: '/img/45544.jpg'
+  },
+  {
+    id: 3,
+    tittle: 'Лего-9641',
+    price: '19 990 ₽',
+    img: '/img/9641.jpg'
+  },
+  {
+    id: 4,
+    tittle: 'Лего-45345',
+    price: '60 000 ₽',
+    img: '/img/45345.jpg'
+  },
+  {
+    id: 5,
+    tittle: 'Лего-45560',
+    price: '20 440 ₽',
+    img: '/img/45560.jpg'
+  }
+]
+
 const Cart = () =>{
     return(
         <div className={style.overlay}>
@@ -12,11 +46,14 @@ const Cart = () =>{
           </div>
 
           <div className={style.cartList}>
-            <CartItem tittle='Название товара' price='5000 руб' img='/img/45544.jpg' />
-            <CartItem tittle='Название товара' price='5000 руб' img='/img/45544.jpg' />
-            <CartItem tittle='Название товара' price='5000 руб' img='/img/45544.jpg' />
-            <CartItem tittle='Название товара' price='5000 руб' img='/img/45544.jpg' />
-            <CartItem tittle='Название товара' price='5000 руб' img='/img/45544.jpg' />
+
+            {
+              cart.map( obj =>{
+                return(
+                  <CartItem key={obj.key} tittle={obj.tittle}  price={obj.price} img={obj.img} />
+                )
+              })
+            }           
             
           </div>
           <div className={style.totalPrice}>

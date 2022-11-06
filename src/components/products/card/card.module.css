@@ -7,7 +7,7 @@
     background-color: white;
     justify-self: end;
     color: #7E8C91;  
-    z-index: 99999999;
+    /*z-index: 99999999;*/
     cursor: pointer;
     margin-top: 20px;
     transition: transform .4s ease-out;

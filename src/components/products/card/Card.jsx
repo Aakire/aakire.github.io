@@ -3,7 +3,7 @@ import style from './card.module.css'
 const Card = (props) =>{
     return(
         <div className={style.productItem}>
-            <button className={style.favoriteBtn}>
+            <button className={style.favoriteBtn} onClick={props.onClickFavorite}>
               <img src='/img/heart-1.png' />
             </button>            
             <img className={style.productImg} src={props.img} />
@@ -15,7 +15,7 @@ const Card = (props) =>{
               <p className={style.price}>Цена <br />
                 <span>{props.price}</span>
               </p>             
-              <button className={style.addCart}><span>В корзину</span>
+              <button className={style.addCart} onClick={props.onClickCart}><span>В корзину</span>
                <img src='/img/cart.png' alt='product img'></img>
               </button>
             </div>

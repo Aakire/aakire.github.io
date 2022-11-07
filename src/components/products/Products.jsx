@@ -72,11 +72,8 @@ const Products = () =>{
                     alert('Вы добавили товар ' + obj.tittle + ' в вашу корзину.')
                   }                  
                 } 
-                onClickFavorite={
-                  () =>{
-                    alert('Вы добавили товар ' + obj.tittle + ' в избранное.')
-                  }
-                }/>
+                
+                />
               )
             })
           }
@@ -86,3 +83,10 @@ const Products = () =>{
 }
 
 export default Products
+
+
+{/*onClickFavorite={
+                  () =>{
+                    alert('Вы добавили товар ' + obj.tittle + ' в избранное.')
+                  }
+                } */}

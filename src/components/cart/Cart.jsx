@@ -35,14 +35,14 @@ const cart = [
   }
 ]
 
-const Cart = () =>{
+const Cart = (props) =>{
     return(
         <div className={style.overlay}>
         <div className={style.cart}>
 
           <div className={style.tittleCart}>
             <h2>Корзина</h2>
-            <button className='closeBtn'>X</button>
+            <button className='closeBtn' onClick={props.closeCart}>X</button>
           </div>
 
           <div className={style.cartList}>

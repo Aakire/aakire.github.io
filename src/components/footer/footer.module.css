@@ -19,3 +19,10 @@ footer{
     font-size: 45px;
     font-weight: bold;
   }
+
+  @media screen and (max-width: 1000px) {
+    footer{
+      grid-template-columns: 1fr;
+      grid-template-rows: 45px 1fr;
+    }
+  }

@@ -3,16 +3,19 @@
   --color_1: #e4eaf7;
   --backcolor_2: #596B8D;
   --color_3: #7E8C91;
-  --color_4: #8F9752;
+  --color_4: #88b5c0;
 }
 
 .App {
   margin: 0;
-  
+}
+
+button{
+  background-color: white;
 }
 
 h1, h2, h3, p{
-  color: var(--fontcolor);
+  color: var(--fontcolor);  
 }
 
 .closeBtn{
@@ -21,9 +24,17 @@ h1, h2, h3, p{
   color: var(--color_3);
   align-self: center;
   padding: 10px 12px;
-  border: 1px solid var(--color_3);
-  border-radius: 12px;
+  border: 2px solid var(--color_3);
+  box-shadow: 2px 2px var(--fontcolor);
+  border-radius: 20px;
   cursor: pointer;
+}
+
+.closeBtn:active{
+  color: var(--color_1);
+  background-color: var(--color_3);
+  border: 2px solid var(--color_3);
+  box-shadow: inset 2px 2px var(--fontcolor);
 }
 
 

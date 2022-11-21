@@ -79,7 +79,7 @@ const Products = (props) =>{
     <div className={style.productsSection}>       
 
         <div className={style.search}>
-          <h2>{props.searchItems ? 'Поиск по запросу: ' +props.searchItems : 'Все смартфоны'}</h2>
+          <h2>{props.searchItems ? 'Поиск по запросу: ' +props.searchItems : 'Все товары'}</h2>
           <div className={style.searchBlock}>
             <img src='/img/search.png' alt='search' />
             <input onChange={onSearchInput} placeholder='Поиск по товарам' />

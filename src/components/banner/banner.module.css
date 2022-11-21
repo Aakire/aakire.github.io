@@ -48,6 +48,7 @@
   
   .bannerBtn:active{
     background-color: var(--color_1);
+    color: var(--backcolor_2);
   }
 
   @media screen and (max-width: 1000px) {

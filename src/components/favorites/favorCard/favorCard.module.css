@@ -28,7 +28,6 @@
     height: 190px; 
     display: block;
     margin: 0 auto;
-    max-width: 325px;
   }
   
   .productTittle{
@@ -53,9 +52,7 @@
     border-radius: 25px;
     padding: 20px;  
     align-items: center;
-    transition: box-shadow 0.5s ease-out;
-    max-width: 360px; 
-    min-height: 415px; 
+    transition: box-shadow 0.5s ease-out;  
   }
   
   .productItem:hover{
@@ -99,8 +96,6 @@
     margin-right: 15px;
   }
 
-
-
   .imgCart{ 
     margin-right: 5px;  
     width: 40px;
@@ -116,9 +111,4 @@
     cursor: pointer;
     background-color: var(--color_4);
     box-shadow: 5px 5px 5px var(--color_3);
-  }
-
-  .preloadBlock{
-    position: absolute;
-    vertical-align: top;
   }

@@ -10,7 +10,6 @@ header{
     grid-template-columns: repeat(3, 1fr);
     justify-items: end;
     align-items: center;
-    
   }
   
   .logo{
@@ -20,6 +19,7 @@ header{
   }
   
   .navItem{
+    border: none;
     border-radius: 10px;
     box-shadow: 2px 2px var(--backcolor_2);
     color: var(--color_1);
@@ -35,6 +35,15 @@ header{
   .navItem:hover{
     box-shadow: inset -2px -2px 2px var(--color_1);
     background-color: var(--color_4);
+  }
+
+  .countCartItems{
+    display: inline-block;
+    border: 1px solid var(--color_4);
+    background-color: var(--color_1);
+    border-radius: 24px;
+    color: var(--fontcolor);
+    width: 24px;
   }
 
   @media screen and (max-width: 1000px) {

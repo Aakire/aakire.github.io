@@ -8,7 +8,11 @@ import React from 'react';
 import {Route, Routes} from 'react-router-dom'
 import Favorites from './components/favorites/Favorites';
 
+export   const AppContext = React.createContext({})
+
 function App() {
+
+
 
 
   const [products, setProducts] = React.useState([]);
@@ -46,42 +50,57 @@ function App() {
     setFavorItems((prev) => prev.filter(item => Number(item.id) !== Number(id)))
 }
 
-  return (
-    <div className='app'>
-      {cartOpen ? <Cart 
-      removeCartItem={removeCartItem}
-      cartItems={cartItems} 
-      closeCart={ () => setCartOpen(false) }/> : null
-      }
+const isAddeddToFavor = (vendorCode) => {
+  return favorItems.some((objIsAdded) => objIsAdded.vendorCode === vendorCode )
+}
 
-      <Header openCart={ () => setCartOpen(true) } cartItems={cartItems}/> 
-      <Routes>
-        <Route path='/favorites' element={
-          <Favorites 
-            items={products} 
-            cartItems={cartItems} 
-            setCartItems={setCartItems}
-            favorItems={favorItems}
-            setFavorItems={setFavorItems}
-            removeFromFavor={removeFromFavor}
-          />} 
-        />
-        <Route path='/' element={            
-              <Home 
-                items={products} 
-                cartItems={cartItems} 
-                setCartItems={setCartItems}
-                searchItems={searchItems}
-                setSearchItems={setSearchItems} 
-                favorItems={favorItems}
-                setFavorItems={setFavorItems}
-                loading={loading}
-              />  
+const isAddeddToCart = (vendorCode) => {
+  return cartItems.some((objIsAdded) => objIsAdded.vendorCode === vendorCode )
+}
+
+  return (
+    <AppContext.Provider value={{
+      products, 
+      favorItems, 
+      cartItems,
+      setCartItems,
+      setFavorItems,
+      setProducts,
+      removeFromFavor,
+      isAddeddToFavor,
+      isAddeddToCart,
+      loading,
+      searchItems,
+      setSearchItems
+    }}>
+        <div className='app'>
+          {cartOpen ? <Cart 
+          removeCartItem={removeCartItem}
+          cartItems={cartItems} 
+          closeCart={ () => setCartOpen(false) }
+          totalPrice = {
+            cartItems.reduce((totalItems, objPrice) => totalItems + Number(objPrice.price), 0)
           }
-        />
-      </Routes>    
-      <Footer />   
-    </div>  
+          /> : null
+          }
+
+        <Header openCart={ () => setCartOpen(true) } cartItems={cartItems}/> 
+        <Routes>
+          <Route path='/favorites' element={
+            <Favorites />} 
+          />
+          <Route path='/' element={            
+                <Home 
+                  searchItems={searchItems}
+                  setSearchItems={setSearchItems} 
+                  loading={loading}
+                />  
+            }
+          />
+        </Routes>    
+        <Footer />   
+        </div>
+    </AppContext.Provider>
   );
 }
 

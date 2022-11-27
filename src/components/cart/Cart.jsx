@@ -34,7 +34,7 @@ const Cart = (props) =>{
           </div>
           <div className={style.totalPrice}>
             <h3 className={style.totalPriceText}>Сумма заказа:</h3>
-            <h3 className={style.summText}>5000 p</h3>
+            <h3 className={style.summText}>{props.totalPrice  + ' ₽'}</h3>
             <button >Заказать</button>
           </div>
         </div>

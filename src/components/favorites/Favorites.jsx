@@ -1,14 +1,18 @@
 import React from "react";
 import FavorCard from './favorCard/FavorCard';
 import axios from 'axios';
+import { AppContext } from "../../App";
+
 
 import style from './favorites.module.css'
 
 const Favorites = (props) => {
+
+    const context= React.useContext(AppContext);
     
     const addedToCart = (objCart) => {
         axios.post('https://636fcdfcf2ed5cb047e5d7ce.mockapi.io/CartItem', objCart)  
-        props.setCartItems([...props.cartItems, objCart])  
+        context.setCartItems([...context.cartItems, objCart])  
     }
     
     return(
@@ -16,16 +20,15 @@ const Favorites = (props) => {
         <div className={style.productsSection}>            
             <h1 className={style.favorTittle}>Избранные товары</h1>            
             {
-              props.favorItems.length == 0 
+              context.favorItems.length == 0 
               ? <div>
                     <h2 className={style.message}>Здесь ещё не добавлены товары.</h2>
                     <button className={style.bannerBtn}>Отправиться за покупками</button>
-
                 </div>
               :
               <div className={style.products}> 
                     {
-                        props.favorItems.map( obj =>{
+                        context.favorItems.map( obj =>{
                         return(
                             <FavorCard 
                             id={obj.id}
@@ -39,7 +42,6 @@ const Favorites = (props) => {
                                     addedToCart(cartObj);                                
                                 }                                      
                             }
-                            removeFromFavor={props.removeFromFavor} 
                             />
                         )
                         })

@@ -19,9 +19,7 @@ const Cart = (props) =>{
               ? 
                 <div>
                   <h2>В вашу корзину ещё не добавлены товары.</h2>
-                  
                   <button className={style.bannerBtn} onClick={props.closeCart}>Отправиться за покупками</button>
-                  
                 </div>
                : 
                 props.cartItems.map( obj =>{

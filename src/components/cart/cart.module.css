@@ -77,6 +77,30 @@
     justify-self: end;
   }
 
+  /* ----------------banner-button----------------*/
+
+  .bannerBtn{
+    background-color: var(--backcolor_2);
+    color: var(--color_1);
+    margin: 20px 50px;
+    padding: 20px 25px;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 15px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .bannerBtn:hover{
+    box-shadow: 5px 5px 5px var(--fontcolor);
+    background-color: var(--color_4);
+  }
+  
+  .bannerBtn:active{
+    background-color: var(--color_1);
+    color: var(--backcolor_2);
+  }
+
   @media screen and (max-width: 750px) {
     .cart{
       width: 500px;

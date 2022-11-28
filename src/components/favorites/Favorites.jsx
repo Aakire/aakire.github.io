@@ -2,6 +2,7 @@ import React from "react";
 import FavorCard from './favorCard/FavorCard';
 import axios from 'axios';
 import { AppContext } from "../../App";
+import {Link} from 'react-router-dom';
 
 
 import style from './favorites.module.css'
@@ -23,7 +24,9 @@ const Favorites = (props) => {
               context.favorItems.length == 0 
               ? <div>
                     <h2 className={style.message}>Здесь ещё не добавлены товары.</h2>
-                    <button className={style.bannerBtn}>Отправиться за покупками</button>
+                    <Link to='/'>
+                        <button className={style.bannerBtn}>Отправиться за покупками</button>
+                    </Link>
                 </div>
               :
               <div className={style.products}> 

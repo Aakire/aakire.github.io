@@ -1,5 +1,6 @@
 import CartItem from "./cartItem/CartItem";
 import style from './cart.module.css'
+import {Link} from 'react-router-dom';
 
 const Cart = (props) =>{
     return(
@@ -15,8 +16,14 @@ const Cart = (props) =>{
 
             {
               props.cartItems.length == 0 
-              ? <h2>В вашу корзину ещё не добавлены товары.</h2> : 
-              
+              ? 
+                <div>
+                  <h2>В вашу корзину ещё не добавлены товары.</h2>
+                  
+                  <button className={style.bannerBtn} onClick={props.closeCart}>Отправиться за покупками</button>
+                  
+                </div>
+               : 
                 props.cartItems.map( obj =>{
                   return(
                     <CartItem 

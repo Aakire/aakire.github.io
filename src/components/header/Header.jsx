@@ -19,11 +19,8 @@ const Header = (props) =>{
                 <div>
                     <button className={style.navItem} onClick={props.openCart}>
                         Корзина <div className={style.countCartItems}>{props.cartItems.length}</div>
-                    </button>
-                    
-                </div>
-                
-                
+                    </button>                    
+                </div>  
             </nav>
         </header>
     )

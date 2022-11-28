@@ -1,0 +1,115 @@
+.contactsSection h2, h3, p {
+    color: var(--fontcolor);
+    line-height: 100%;
+    margin: 10px 30px;
+}
+
+.contactsSection{
+    margin: 0 auto;
+    min-height: calc(100vh - 272px);
+}
+
+.contactsSection h2{
+    font-size: 20px;
+}
+
+.contactsSection h3{
+    font-size: 16px;
+}
+
+.contactsSection p{
+    font-size: 14px;
+}
+
+.contactsSection h1{
+    color: var(--backcolor_2);
+    font-size: 25px;
+    padding: 8px 45px;
+}
+
+.issuePoints{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: space-evenly;
+    align-items: center;
+    border-bottom: 2px solid var(--color_4);
+    padding-bottom: 30px;
+    margin: 20px 30px;
+}
+
+.adress{
+    border-bottom: 2px solid var(--color_4);
+    margin: 20px;
+    background-color: var(--color_1);
+    border-radius: 20px;
+    gap: 30px;
+    max-width: 450px;
+}
+
+/*------------------team-----------------*/
+
+.team{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin: 20px 30px;
+}
+
+.employee{
+    border-bottom: 2px solid var(--color_4);
+    margin: 20px;
+    background-color: var(--color_1);
+    border-radius: 20px;
+    gap: 30px;
+    display: grid;
+    grid-template-columns: 120px 1fr;
+    max-width: 450px;
+}
+
+.avatar{
+    display: block;
+    width: 70px;
+    margin: auto;
+    border-radius: 15px;
+}
+
+/*-----------Button-------------*/
+
+.bannerBtn{
+    background-color: var(--backcolor_2);
+    color: var(--color_1);
+    margin: 20px 50px;
+    padding: 20px 25px;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 15px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .bannerBtn:hover{
+    box-shadow: 5px 5px 5px var(--fontcolor);
+    background-color: var(--color_4);
+  }
+  
+  .bannerBtn:active{
+    background-color: var(--color_1);
+    color: var(--backcolor_2);
+  }
+
+/*------------media-----------*/
+
+@media screen and (max-width: 1200px) {
+    .issuePoints{
+        grid-template-columns: 1fr;   
+        grid-template-rows: repeat(3, 1fr);
+
+    }
+
+    .team{
+        grid-template-columns: 1fr;   
+        grid-template-rows: repeat(3, 1fr);
+    }
+
+
+}
+

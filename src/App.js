@@ -7,6 +7,7 @@ import Home from './components/Home';
 import React from 'react';
 import {Route, Routes} from 'react-router-dom'
 import Favorites from './components/favorites/Favorites';
+import Contacts from './components/Contacts/Contacts';
 
 export   const AppContext = React.createContext({})
 
@@ -97,6 +98,9 @@ const isAddeddToCart = (vendorCode) => {
                 />  
             }
           />
+          <Route path='/contacts' element={
+            <Contacts /> }
+          />  
         </Routes>    
         <Footer />   
         </div>

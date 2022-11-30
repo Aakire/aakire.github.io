@@ -24,52 +24,21 @@ const Products = (props) =>{
               isLoading={props.loading}
               addItemToCart={
                 (cartObj) =>{
-                  addedToCart(cartObj);
+                  context.addItemToCart(cartObj);
                 }                                      
               }
               addItemToFavor={
                   (favorObj) => {
-                    addedToFavor(favorObj);
+                    context.addItemToFavor(favorObj);
                   }  
-              }                 
+              } 
+                              
             />
           )  
         })
   }
 
-  const addedToCart = async (objCart) => {
-    try{
-      const findItem = context.cartItems.find((obj) => obj.vendorCode === objCart.vendorCode)
 
-      if (findItem){
-        axios.delete(`https://636fcdfcf2ed5cb047e5d7ce.mockapi.io/CartItem/${findItem.id}`) 
-        context.setFavorItems((prev) => prev.filter(item => item.vendorCode !== objCart.vendorCode))
-      }else{
-        const {data} = await axios.post('https://636fcdfcf2ed5cb047e5d7ce.mockapi.io/CartItem', objCart)  
-        context.setCartItems([...context.cartItems, data])
-      }
-    }
-    catch{
-      alert("Не удалось добавить товар в корзину.")
-    }  
-  }
-
-  const addedToFavor = async (objFavor) => {
-    try{
-      const findItem = context.favorItems.find((obj) => obj.vendorCode === objFavor.vendorCode)
-
-    if (findItem){
-      axios.delete(`https://636fcdfcf2ed5cb047e5d7ce.mockapi.io/FavoriteItem/${findItem.id}`) 
-      context.setFavorItems((prev) => prev.filter(item => item.vendorCode !== objFavor.vendorCode))
-    }else{
-      const {data} = await axios.post('https://636fcdfcf2ed5cb047e5d7ce.mockapi.io/FavoriteItem', objFavor)
-      context.setFavorItems([...context.favorItems, data])
-    } 
-    }
-    catch{
-      alert("Не удалось добавить товар в избранное.")
-    } 
-  }
   
   const onSearchInput = (inputValue) => {    
     props.setSearchItems(inputValue.target.value)

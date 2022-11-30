@@ -1,7 +1,7 @@
 import React from "react";
-import FavorCard from './favorCard/FavorCard';
+import Card from '../card/Card'
 import axios from 'axios';
-import { AppContext } from "../../App";
+import { AppContext } from "../../../App";
 import {Link} from 'react-router-dom';
 
 
@@ -33,18 +33,21 @@ const Favorites = (props) => {
                     {
                         context.favorItems.map( obj =>{
                         return(
-                            <FavorCard 
-                            id={obj.id}
-                            vendorCode={obj.vendorCode} 
-                            tittle={obj.tittle} 
-                            description={obj.description} 
-                            price={obj.price} 
-                            img={obj.img}
-                            addItemToCart={
-                                (cartObj) =>{
-                                    addedToCart(cartObj);                                
-                                }                                      
-                            }
+                            <Card 
+
+                                {...obj}
+
+                                addItemToCart={
+                                    (cartObj) =>{
+                                        context.addItemToCart(cartObj);
+                                    }                                      
+                                }
+                                addItemToFavor={
+                                    (favorObj) => {
+                                        context.addItemToFavor(favorObj);
+                                    }  
+                                } 
+                                                
                             />
                         )
                         })

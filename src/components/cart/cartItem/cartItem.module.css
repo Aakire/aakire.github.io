@@ -1,15 +1,18 @@
 .cartItem{
     display: grid;
-    grid-template-columns:  1fr 2fr 1fr;
+    grid-template-columns:  1fr 2fr 1fr 1fr;
     border: 1px solid var(--color_3);
     border-radius: 15px;
-    padding: 0px 15px;
+    padding: 8px 15px;
     margin-bottom: 20px;
     background-color: white;
+    align-items: center;
+    text-align: center;
+
   }
   
   .cartItemImg{
-    width: 90px;
+    height: 80px;
     margin: auto auto;
   }
 

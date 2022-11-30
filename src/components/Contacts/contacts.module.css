@@ -1,6 +1,6 @@
 .contactsSection h2, h3, p {
     color: var(--fontcolor);
-    line-height: 100%;
+    line-height: 120%;
     margin: 10px 30px;
 }
 

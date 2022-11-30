@@ -39,6 +39,7 @@
   .price{
     color: var(--color_3);
     font-weight: bold;
+    margin: 0px;
   }
   
   .price span{
@@ -46,6 +47,7 @@
     font-size: 20px;
     margin: 0px;
   }
+
   .productItem{
     display: grid;
     grid-template-rows: 20px 200px 1fr 60px;
@@ -67,6 +69,11 @@
     grid-template-columns: 1fr 1fr;
     align-items: center;
   }
+
+  .price{
+    justify-self: start;
+    line-height: 150%;
+  }
   
   .onCart{
     justify-self: end;
@@ -79,8 +86,8 @@
     align-self: center;  
     font-weight: bold;
     display: grid;
-    grid-template-columns: 1fr 0.3fr;    
-    margin-right: 15px;
+    grid-template-columns: 1fr 0.3fr;   
+
   }
   
   .offCart{
@@ -96,7 +103,7 @@
     font-weight: bold;
     display: grid;
     grid-template-columns: 1fr 0.3fr;    
-    margin-right: 15px;
+
   }
 
 
@@ -113,6 +120,12 @@
   }  
 
   .onCart:hover{
+    cursor: pointer;
+    background-color: var(--color_4);
+    box-shadow: 5px 5px 5px var(--color_3);
+  }
+
+  .offCart:hover{
     cursor: pointer;
     background-color: var(--color_4);
     box-shadow: 5px 5px 5px var(--color_3);

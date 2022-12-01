@@ -1,21 +1,18 @@
 .bannerSection{
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr;
+    height: 350px;
     margin: 50px;
   }
   
   .banner{    
     display: grid;
+    height: 350px;
     grid-template-columns: 0.5fr 1fr;
-    justify-items: end;
-    align-items: center;
+    justify-content: center;
     background-image: linear-gradient(to top, rgba(125, 126, 179, 0.048), rgba(18, 128, 192, 0.103)), url("/public/img/robobanner.png");
     background-size: contain;
     background-repeat: no-repeat;
     background-position-x: right;
     background-position: start;
-    padding: 40px 15px;
     border-radius: 30px;
   }
   
@@ -51,9 +48,33 @@
     color: var(--backcolor_2);
   }
 
+  .textSection{
+    height: 350px;
+    margin: 0 auto;    
+    background-image: linear-gradient(to top, rgba(125, 126, 179, 0.048), rgba(18, 128, 192, 0.103));
+    border-radius: 30px;
+
+  }
+  
+  .textSection h2{
+    font-size: 35px;
+    color: var(--backcolor_2);
+    margin-left: 50px;
+  }
+
+  .textSection p{
+    margin: 0 50px;
+    text-align: justify;
+    font-size: 16px;
+
+  }
+
+
+  
+
   @media screen and (max-width: 1000px) {
     .banner{
-      background-image: linear-gradient(to top, rgba(222, 222, 223, 0.849), rgba(226, 240, 248, 0.938)), url("/public/img/robobanner.png");
+      background-image: linear-gradient(to top, rgba(222, 222, 223, 0.849), rgba(226, 240, 248, 0.938));
     }
     
   }

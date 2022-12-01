@@ -14,22 +14,25 @@
     background-position-x: right;
     background-position: start;
     border-radius: 30px;
+    padding-top: 30px;
   }
   
   .textBanner{
     color: var(--fontcolor);
     font-size: 40px;
     font-weight: bold;
+    margin: 20px 50px;
   }
   
   .textBanner span{
     color: var(--backcolor_2);
+    
   }
   
   .bannerBtn{
     background-color: var(--backcolor_2);
     color: var(--color_1);
-    margin-top: 20px;
+    margin: 25px 50px;
     padding: 20px 25px;
     font-size: 20px;
     font-weight: bold;

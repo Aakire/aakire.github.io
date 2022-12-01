@@ -1,6 +1,7 @@
 import style from './banner.module.css'
 import React from "react"
 import Slider from "react-slick"
+import {Link} from 'react-router-dom';
 
 const Banner = () => {
 
@@ -20,8 +21,12 @@ const Banner = () => {
             <div className={style.banner}>
                 <p className={style.textBanner}>Робототехнические конструкторы <br />
                 <span>для образования детей</span><br />
-                <button className={style.bannerBtn}>Показать товары</button>
                 </p>
+                <Link to='/contacts'>
+                    <button className={style.bannerBtn}>Узнать о компании</button>
+                </Link>
+                
+                
             </div>
             <div className={style.textSection}>
                 <h2>Робототехника на основе Lego</h2>
